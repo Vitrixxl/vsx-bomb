@@ -99,8 +99,8 @@ export default function Game() {
             <div className="fixed top-4 left-4 w-72 px-4  py-2 border border-white flex flex-col gap-2 ">
                 <h1>Players : </h1>
                 <div className="flex flex-col gap-2 w-full">
-                    {users && users.map((user: User) => (
-                        <div className="w-full flex items-center justify-between">
+                    {users && users.map((user: User, index: number) => (
+                        <div key={index + user.username} className="w-full flex items-center justify-between">
                             <p>{user.username}</p>
                             <p>0</p>
                         </div>
