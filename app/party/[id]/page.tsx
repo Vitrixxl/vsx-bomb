@@ -112,7 +112,7 @@ export default function Game() {
 
                 <div className={`max-h-full grid  max-w-6xl mx-auto aspect-square relative grid-rows-11 grid-cols-11`} >
                     {grid.map((row: Array<Bloc>) => (
-                        row.map((bloc: Bloc) => {
+                        row.map((bloc: Bloc, index: number) => {
                             let block
                             switch (bloc.block) {
                                 case 0:
@@ -128,7 +128,7 @@ export default function Game() {
                             }
                             return (
 
-                                <div className={"row-span-1 col-span-1  p-2 " + (block)} >{bloc.bomb && <div className='size-full bomb'> </div>}   </div>
+                                <div key={index} className={"row-span-1 col-span-1  p-2 " + (block)} >{bloc.bomb && <div className='size-full bomb'> </div>}   </div>
                             )
                         }
                         )
