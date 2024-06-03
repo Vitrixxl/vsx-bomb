@@ -4,7 +4,7 @@ let socket: any;
 
 export const initializeSocket = () => {
     if (!socket) {
-        socket = io('http://localhost:3002');
+        socket = io('https://bomb-server.vercel.app/');
 
         socket.on('connect', () => {
             console.log('Connected to the server');
